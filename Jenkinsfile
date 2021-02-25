@@ -7,8 +7,8 @@ stages {
 stage('Git Checkout') {
 steps {
 git branch: 'main',
-credentialsId: '14bc8520-e78c-483f-b2ee-f33b97c9b843',
-url: 'https://github.com/shashisingh1998/new.git'
+credentialsId: 'e8d0d800-ea2d-43eb-a937-ab0a484cace8',
+url: 'https://github.com/navneetguraya/new.git'
 }
 }
 stage ('Clean') {
