@@ -38,13 +38,13 @@ sh 'mvn package'
 }
 stage ('Deploy War File') {
 steps {
-sh "cp target/game-of-life.war /home/ec2-user/apache-tomcat-8.5.61/webapps/"
+sh "cp target/game-of-life.war /home/ec2-user/etc/apache-tomcat-8.5.61/webapps/"
 }
 }
 stage ('Restart tomcat') {
 steps {
-sh "/etc/apache-tomcat-8.5.61/bin/shutdown.sh"
-sh "/etc/apache-tomcat-8.5.61/bin/startup.sh"
+sudo sh "/etc/apache-tomcat-8.5.61/bin/shutdown.sh"
+sudo sh "/etc/apache-tomcat-8.5.61/bin/startup.sh"
 }
 }
 }
