@@ -41,11 +41,5 @@ steps {
 sh "cp /root/.jenkins/workspace/navneet/gameoflife-web/target/gameoflife.war /etc/apache-tomcat-8.5.61/webapps/"
 }
 }
-stage ('Restart tomcat') {
-steps {
-sh "/etc/apache-tomcat-8.5.61/bin/shutdown.sh"
-sh "/etc/apache-tomcat-8.5.61/bin/startup.sh"
-}
-}
 }
 }
